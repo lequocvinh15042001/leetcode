@@ -7,17 +7,19 @@ class Solution {
     }
     
     public int removeElement(int[] nums, int val) {
+        
+        int boundary = nums.length - 1;
         int i = 0;
-        int boudary = nums.length - 1;
-        while(i <= boudary){
+        while(i <= boundary){
             if(nums[i] == val){
-                swap(nums, i, boudary);
-                boudary--;
+                swap(nums, i, boundary);
+                boundary--;
             }
-            else{
+            else {
                 i++;
             }
         }
         return i;
+        
     }
 }
